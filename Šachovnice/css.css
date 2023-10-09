@@ -30,3 +30,44 @@ h1{
 .sl{
     background-color: pink;
 }
+.tlacitkos2{
+    border-color: black;
+    background-color: lightgreen;
+    margin-left: 80px;
+}
+.tlacitkos3{
+    border-color: black;
+    background-color: red;
+    margin-left: 30px;
+}
+td {
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+}
+.tlacitkos4{
+    border-color: black;
+    background-color: rgb(79, 207, 20);
+    margin-left: 420px;
+    color: white;
+}
+.tlacitkos5{
+    border-color: black;
+    background-color: rgb(230, 37, 23);
+    margin-left: 50px;
+    color: white;
+}
+.tlacitkos6{
+    border-color: black;
+    background-color: rgb(79, 207, 20);
+    margin-left: 410px;
+    margin-top: 10px;
+    color: white;
+}
+.tlacitkos7{
+    border-color: black;
+    background-color: rgb(230, 37, 23);
+    margin-left: 40px;
+    margin-top: 10px;
+    color: white;
+}

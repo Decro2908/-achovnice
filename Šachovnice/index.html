@@ -49,6 +49,12 @@
             <label for="sloupce">Počet sloupců:</label>
             <input class="rd" type="number" id="sloupce" min="1"><br>
             <button class="tlacitkos" onclick="generujSachovnici()">Generovat</button>
+            <button class="tlacitkos2" onclick="potvrditZmeny()">Potvrdit změny</button>
+            <button class="tlacitkos3" onclick="zrusitUpravy()">Zrušit úpravy</button>
+                    <button class="tlacitkos4" onclick="pridejRadek()">Přidat řádek</button>
+                    <button class="tlacitkos5" onclick="odeberRadek()">Odebrat řádek</button>
+                    <button class="tlacitkos6" onclick="pridejSloupec()">Přidat sloupec</button>
+                    <button class="tlacitkos7" onclick="odeberSloupec()">Odebrat sloupec</button>
             <div id="sachovnice"></div>
         </div>
 
@@ -61,20 +67,45 @@
     
                 for (var i = 0; i < radky; i++) {
                     sachovniceHtml += "<tr>";
-                    for (var j = 0; j < sloupce; j++) {
+                        for (var j = 0; j < sloupce; j++) {
+                        var cellId = "cell_" + i + "_" + j;
                         if ((i + j) % 2 === 0) {
-                            sachovniceHtml += "<td class='ruzovka'></td>";
+                            sachovniceHtml += "<td contenteditable='true' class='ruzovka'></td>";
                         } else {
-                            sachovniceHtml += "<td class='cerna'></td>";
+                            sachovniceHtml += "<td contenteditable='true' class='cerna'></td>";
                         }
                     }
                     sachovniceHtml += "</tr>";
                 }
     
                 sachovniceHtml += "</table>";
-                document.getElementById("sachovnice").innerHTML = sachovniceHtml;
+                originalSachovniceHtml = sachovniceHtml;
+    }
+
+    function potvrditZmeny() {
+        document.getElementById("sachovnice").innerHTML = originalSachovniceHtml;
+    }
+
+    function zrusitUpravy() {
+
+        document.getElementById("sachovnice").innerHTML = "";
+        originalSachovniceHtml = "";
+    }
+    function odeberRadek() {
+            var table = document.querySelector("table");
+            if (table.rows.length > 1) {
+                table.deleteRow(-1);
             }
-        </script>
+        }
+        function odeberSloupec() {
+            var table = document.querySelector("table");
+            if (table.rows[0].cells.length > 1) {
+                for (var i = 0; i < table.rows.length; i++) {
+                    table.rows[i].deleteCell(-1);
+                }
+            }
+        }
+    </script>
     </div>
     </body>
 </body>
