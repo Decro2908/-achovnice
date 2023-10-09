@@ -1,0 +1,32 @@
+.text{
+ margin-left: 600px;
+ font-family: 'Times New Roman', Times, serif;
+ color: pink;
+ font-size: larger;
+ text-decoration: underline;
+}
+.podpis{
+    margin-left: 500px;
+}
+.generatos{
+    margin-left: 520px;
+    margin-top: 50px;
+}
+.tlacitkos{
+    margin-left: 250px;
+    margin-bottom: 50px;
+    border-color: black;
+    background-color: pink;
+}
+.vysledkos{
+    margin-left: 50px;
+}
+h1{
+    text-decoration: underline;
+}
+.rd{
+    background-color: pink;
+}
+.sl{
+    background-color: pink;
+}
